@@ -22,20 +22,29 @@ body {
   background-color: #de9828;
 }
 
-/*topnav links */
+/* CHANGED */
 .topnav bar {
   float: left;
   display: block;
-  color: #2f2f2;
   text-align: center;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
   padding: 14px 16px;
-  text-decoration: none;
+  font-family: inherit;
 }
 
-.topnav bar:hover {
+/* CHANGED */
+.topnav bar:hover, .dropdown:hover .dropbtn {
   background-color: #8133a3;
-  color: black;
   cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  font-family: inherit;
 }
 
   .topnav .search-container {
@@ -99,6 +108,48 @@ body {
   border-radius: 10px;
 }
 
+  .dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 </style>
 </head>
 
@@ -111,26 +162,58 @@ body {
 <div class="topnav">
   <bar href="#">Home</bar>
   <bar href="#">About</bar>
-  <bar href="#">Admissions</bar>
-  <bar href="#">Programs</bar>
-  <bar href="#">Athletics</bar>
+
+<div class="dropdown">
+    <button class="dropbtn">Admissions 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">How To Apply</a>
+      <a href="#">Tour Our Campus</a>
+      <a href="#">Admitted Students' FAQ</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Programs 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Majors and Minors</a>
+      <a href="#">Distance Learning</a>
+      <a href="#">Financial Aid</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Athletics 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Buy Tickets</a>
+      <a href="#">Schedule</a>
+      <a href="#">Coaches</a>
+      <a href="#">Rosters</a>
+    </div>
+  </div> 
+ 
   <bar href="#">Alumni</bar>
   <bar href="#">Store</bar>
-  <bar href="#">Contact</bar>
-  <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Contact 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Admissions Counselor</a>
+      <a href="#">Faculty and Staff</a>
+    </div>
   </div>
+
 </div>
 
   <div class="container">
   <img src="campus.jpg" alt="Campus" width="400">
-  <div class="column">
-    <h2>News</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-  </div>
     <button class="btn">Apply Now</button>
 </div>
 
