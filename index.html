@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
 <style>
 
 body {
@@ -30,11 +32,35 @@ body {
   text-decoration: none;
 }
 
-/* topnav color change */
 .topnav bar:hover {
   background-color: #8133a3;
   color: black;
+  cursor: pointer;
 }
+
+  .topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 8px;
+  margin-top: 8px;
+  font-size: 17px;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 10px 10px;
+  margin-top: 8px;
+  margin-right: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #808080;
+}
+
 
 
 </style>
@@ -55,7 +81,12 @@ body {
   <bar href="#">Alumni</bar>
   <bar href="#">Store</bar>
   <bar href="#">Contact</bar>
-  <bar href="#">Login</bar>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
 </div>
 
 </body>
