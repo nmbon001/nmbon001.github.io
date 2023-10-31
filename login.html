@@ -55,7 +55,20 @@ span.psw {
   padding: 16px;
 }
 
+.column {
+  float: left;
+  width: 70%;
+  padding: 24px 15px;
+  border-radius: 21px;
+  color: #fff;
+  display: block;
+}
 
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 </style>
 </head>
@@ -64,14 +77,16 @@ span.psw {
 
 <h1>Login Form</h1>
 
-<form action="/action_page.php" method="post">
+<div class="row">
+  <div class="column">
+    <form action="/action_page.php" method="post">
   <div class="imgcontainer">
     <img src="smallLogo.png" alt="SmallLogo" width="100" class="avatar">
     </div>
 
 <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname..." required>
+      <input type="text" placeholder="Enter Username..." name="uname" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password..." name="psw" required>
@@ -87,6 +102,11 @@ span.psw {
     <span class="psw">Forgot password? <a href="#">Click here.</a></span>
   </div>
 </form>
+  </div>
+  
+  
+  
+</div>
 
 </body>
 </html>
